@@ -10,18 +10,6 @@ Projects:
     notify-email: shahdharmit@gmail.com
     depends-on: centos/centos:latest
 
-  - id: 2
-    app-id: dharmit
-    job-id: golang
-    git-url: https://github.com/dharmit/dockerfiles
-    git-branch: master
-    git-path: /golang/1.8/
-    target-file: Dockerfile
-    desired-tag: 1.8
-    notify-email: shahdharmit@gmail.com
-    build-context: ./
-    depends-on: dharmit/base:latest
-
   - id: 3
     app-id: dharmit
     job-id: python
