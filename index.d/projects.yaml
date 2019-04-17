@@ -1,71 +1,82 @@
 Projects:
-  - id: 1
-    app-id: devcloud
-    job-id: wget
-    git-url: https://github.com/dharmit/cccp-demo
-    git-branch: master
-    git-path: wget/
-    target-file: Dockerfile
-    desired-tag: latest
-    notify-email: shahdharmit@gmail.com
-    depends-on: centos/centos:latest
-
-  - id: 3
-    app-id: dharmit
-    job-id: python
-    git-url: https://github.com/dharmit/dockerfiles
-    git-branch: master
-    git-path: /python/2/
-    target-file: Dockerfile
-    desired-tag: 2.7
-    notify-email: shahdharmit@gmail.com
-    build-context: ./
-    depends-on: centos/centos:latest
-
-  - id: 4
-    app-id: dharmit
-    job-id: python
-    git-url: https://github.com/dharmit/dockerfiles
-    git-branch: master
-    git-path: /python/3/
-    target-file: Dockerfile
-    desired-tag: 3.5
-    notify-email: shahdharmit@gmail.com
-    build-context: ./
-    depends-on: centos/centos:latest
-
-  - id: 5
-    app-id: dharmit
-    job-id: base
-    git-url: https://github.com/dharmit/dockerfiles
-    git-branch: master
-    git-path: /base
-    target-file: Dockerfile
-    desired-tag: latest
-    notify-email: shahdharmit@gmail.com
-    build-context: ./
-    depends-on: centos/centos:latest
-
-  - id: 6
-    app-id: dharmit
-    job-id: dotnet20
-    git-url: https://github.com/dharmit/dockerfiles
-    git-branch: master
-    git-path: /dotnet20/
-    target-file: Dockerfile
-    desired-tag: latest
-    notify-email: shahdharmit@gmail.com
-    build-context: ./
-    depends-on: dharmit/base:latest
-
-  - id: 7
-    app-id: dharmit
-    job-id: beanstalkd
-    git-url: https://github.com/dharmit/dockerfiles
-    git-branch: master
-    git-path: /beanstalkd
-    target-file: Dockerfile
-    desired-tag: latest
-    notify-email: shahdharmit@gmail.com
-    depends-on: dharmit/base:latest
-    build-context: ./
+    #   - id: 1
+    #     app-id: devcloud
+    #     job-id: wget
+    #     git-url: https://github.com/dharmit/cccp-demo
+    #     git-branch: master
+    #     git-path: wget/
+    #     target-file: Dockerfile
+    #     desired-tag: latest
+    #     notify-email: shahdharmit@gmail.com
+    #     depends-on: centos/centos:latest
+    # 
+    #   - id: 3
+    #     app-id: dharmit
+    #     job-id: python
+    #     git-url: https://github.com/dharmit/dockerfiles
+    #     git-branch: master
+    #     git-path: /python/2/
+    #     target-file: Dockerfile
+    #     desired-tag: 2.7
+    #     notify-email: shahdharmit@gmail.com
+    #     build-context: ./
+    #     depends-on: centos/centos:latest
+    # 
+    #   - id: 4
+    #     app-id: dharmit
+    #     job-id: python
+    #     git-url: https://github.com/dharmit/dockerfiles
+    #     git-branch: master
+    #     git-path: /python/3/
+    #     target-file: Dockerfile
+    #     desired-tag: 3.5
+    #     notify-email: shahdharmit@gmail.com
+    #     build-context: ./
+    #     depends-on: centos/centos:latest
+    # 
+    #   - id: 5
+    #     app-id: dharmit
+    #     job-id: base
+    #     git-url: https://github.com/dharmit/dockerfiles
+    #     git-branch: master
+    #     git-path: /base
+    #     target-file: Dockerfile
+    #     desired-tag: latest
+    #     notify-email: shahdharmit@gmail.com
+    #     build-context: ./
+    #     depends-on: centos/centos:latest
+    # 
+    #   - id: 6
+    #     app-id: dharmit
+    #     job-id: dotnet20
+    #     git-url: https://github.com/dharmit/dockerfiles
+    #     git-branch: master
+    #     git-path: /dotnet20/
+    #     target-file: Dockerfile
+    #     desired-tag: latest
+    #     notify-email: shahdharmit@gmail.com
+    #     build-context: ./
+    #     depends-on: dharmit/base:latest
+    # 
+    #   - id: 7
+    #     app-id: dharmit
+    #     job-id: beanstalkd
+    #     git-url: https://github.com/dharmit/dockerfiles
+    #     git-branch: master
+    #     git-path: /beanstalkd
+    #     target-file: Dockerfile
+    #     desired-tag: latest
+    #     notify-email: shahdharmit@gmail.com
+    #     depends-on: dharmit/base:latest
+    #     build-context: ./
+    - id: 13
+      app-id: che-stacks
+      job-id: centos-quarkus.io-jdk8
+      git-url: https://github.com/eclipse/che-dockerfiles
+      git-branch: master
+      git-path: recipes/centos_quarkus.io_jdk8
+      target-file: Dockerfile
+      desired-tag: latest
+      notify-email: vorburger@redhat.com
+      build-context: ./
+      depends-on: che-stacks/centos-jdk8:latest
